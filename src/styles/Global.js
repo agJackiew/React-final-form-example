@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     --color-green-light: #E4E9BE;
     --color-yellow: #F8B400;
     --color-grey-light: #FAF5E4;
-    --color-grey-dark: #222;
+    --color-grey-dark: #777;
     --color-pink: #FF6363;
   }
 

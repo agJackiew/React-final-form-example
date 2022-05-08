@@ -26,7 +26,6 @@ const useHttp = () => {
         }
 
         const data = await response.json();
-        console.log('ok');
         applyData(data);
       } catch (error) {
         setHttpError(error.message || 'Unidentified error');
