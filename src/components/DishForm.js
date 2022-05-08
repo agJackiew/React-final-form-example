@@ -26,6 +26,10 @@ const DishForm = () => {
 
   const [reload, setReload] = useState(false);
 
+  const successHandler = () => {
+    setReload(true);
+  };
+
   const backHandler = () => {
     setReload(false);
   };
@@ -69,7 +73,7 @@ const DishForm = () => {
     const headers = {
       'Content-Type': 'application/json'
     };
-    sendRequest(dishesUrl, 'POST', headers, reqObj, backHandler);
+    sendRequest(dishesUrl, 'POST', headers, reqObj, successHandler);
   };
 
   return (

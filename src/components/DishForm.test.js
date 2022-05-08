@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import DishForm from './DishForm';
 
@@ -37,10 +37,18 @@ describe('Type Select', () => {
   });
 });
 describe('Submit button', () => {
-  it('is rendered', () => {
+  it('is rendered', async () => {
     render(<DishForm />);
     const submit = screen.getByText(/submit/i);
+    // const newDishBtn = screen.queryByText(/New Dish/i);
     expect(submit).toBeInTheDocument();
+    // expect(newDishBtn).not.toBeInTheDocument();
+    fireEvent.click(submit);
+
+    await waitFor(() => {
+      const newDishBtn = screen.getByText(/New Dish/i);
+      //expect(newDishBtn).toBeInTheDocument();
+    });
   });
 });
 describe('Reset button', () => {
