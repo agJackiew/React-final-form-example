@@ -178,7 +178,7 @@ const DishForm = () => {
                 <Condition when='type' is='soup'>
                   <div>
                     <label>
-                      Spiciness: <span>{rangeValue ? rangeValue : '?'}</span>
+                      Spiciness: <b>{rangeValue ? rangeValue : '?'}</b>
                     </label>
                     <div>
                       <Field
