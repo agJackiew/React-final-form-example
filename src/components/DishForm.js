@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import Styles from '../styles/Styles';
 import { Form, Field } from 'react-final-form';
 import useHttp from '../hooks/useHttp';
@@ -88,7 +88,6 @@ const DishForm = () => {
         >
           {({ handleSubmit, form, submitting, pristine, values }) => {
             const rangeValue = values['spiciness_scale'];
-
             const onReset = () => {
               form.restart();
             };

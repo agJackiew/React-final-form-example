@@ -86,11 +86,13 @@ export default styled.div`
           background-color: var(--color-green-light);
           color: var(--color-primary-dark);
           font-size: 1.5rem;
+          text-transform: uppercase;
           border: none;
           border-radius: 1.4rem;
 
           &::placeholder {
             color: var(--color-grey-dark);
+            text-transform: initial;
             font-size: 1.2rem;
           }
 

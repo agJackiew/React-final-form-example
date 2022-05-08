@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import food from '../assets/food3.png';
+import food from '../assets/food.png';
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Lato+Sans+JP:wght@100;200;300;400;700&display=swap');
@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     --color-green-light: #E4E9BE;
     --color-yellow: #F8B400;
     --color-grey-light: #FAF5E4;
-    --color-grey-dark: #aaa;
+    --color-grey-dark: #222;
     --color-pink: #FF6363;
   }
 
@@ -35,6 +35,8 @@ const GlobalStyles = createGlobalStyle`
     padding: 2rem;
     height: 100vh;
     background-color: var(--color-primary-dark);
+    background-image: linear-gradient(rgba(6, 35, 34, .5), rgba(4, 35, 6, .5)),url(${food});
+    background-size: contain;  
   }
 `;
 export default GlobalStyles;
